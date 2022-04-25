@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
 
-function classNames(...classes) {
+function classNames(...classes : string[]) {
     return classes.filter(Boolean).join(' ')
   }
 
@@ -24,7 +24,7 @@ export default function Deposits() {
                   className={({ selected }) =>
                     classNames(
                       "w-full text-black rounded-lg hover:text-red-500",
-                      'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60',
+                      "focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60",
                       selected
                         ? "bg-white shadow"
                         : "text-black hover:bg-white/[0.12] hover:text-red-500"
@@ -38,7 +38,7 @@ export default function Deposits() {
                   className={({ selected }) =>
                     classNames(
                       "w-full text-black rounded-lg hover:text-red-500",
-                      'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60',
+                      "focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60",
                       selected
                         ? "bg-white shadow"
                         : "text-black hover:bg-white/[0.12] hover:text-red-500"

@@ -2,6 +2,7 @@
 import react, { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+// import Image from "next/image";
 import CryptIcon from "../public/crypto.jpg";
 
 function classNames(...classes) {
