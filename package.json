@@ -1,6 +1,8 @@
 {
   "name": "cryptoexchange",
   "version": "0.1.0",
+  "description": "Decentralized Ethereum Token Exchange",
+  "author": "JoshShearer.org",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,13 +13,27 @@
   "dependencies": {
     "@headlessui/react": "^1.5.0",
     "@heroicons/react": "^1.0.6",
+    "@truffle/hdwallet-provider": "^2.0.7",
     "autoprefixer": "^10.4.4",
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^3.0.0",
+    "dotenv": "^16.0.0",
+    "moment": "^2.29.3",
     "next": "12.1.5",
+    "openzeppelin-solidity": "^4.5.0",
     "postcss": "^8.4.12",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-redux": "^8.0.1",
+    "redux": "^4.2.0",
+    "redux-logger": "^3.0.6",
+    "reselect": "^4.1.5",
+    "solidity-coverage": "^0.7.21",
     "tailwindcss": "^3.0.24",
+    "truffle": "5.5.11",
+    "truffle-flattener": "^1.6.0",
+    "truffle-hdwallet-provider-privkey": "^0.3.0",
     "web3": "^1.7.3"
   },
   "devDependencies": {

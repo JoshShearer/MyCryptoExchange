@@ -2,7 +2,7 @@
 import react, { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
-// import Image from "next/image";
+import Image from "next/image";
 import CryptIcon from "../public/crypto.jpg";
 
 function classNames(...classes) {
@@ -20,7 +20,7 @@ export default function Header() {
                 <div className="flex-shrink-0">
                   
                   <div className="relative w-12 h-12 overflow-hidden rounded-full ">
-                    <img
+                    <Image
                       objectFit="cover"
                       src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.uPBrGqSV8_52CWr-Oz2_JgHaHa%26pid%3DApi&f=1"
                       alt="CryptoIcon"
