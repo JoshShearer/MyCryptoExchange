@@ -1,18 +1,4 @@
-//Deposit & WIthdraw Funds
-//Manage orders - make or cancel
-//Handles Trades - Charge Fees 
 
-// Todo:
-// [x]Set Fee account
-// [x]Deposit ether
-// [x]Withdraw ether
-// [x]Deposit Tokens <=
-// [x]WIthdraw TOkens
-// [x]Check Balances
-// [ ]Make Order
-// [ ]Cancel Order
-// [ ]Fill Order
-// [ ]Charge Fees
 pragma solidity >=0.8.0 <0.9.0;
 
 import "./Token.sol";
