@@ -8,26 +8,26 @@ function classNames(...classes : string[]) {
 export default function Deposits() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   return (
-    <div className="w-full px-4 pt-16 ">
-      <div className="w-full max-w-md p-2 mx-auto bg-gray-800 rounded-2xl">
+    <div className="w-full px-3 pt-3 ">
+      <div className="w-full max-w-sm p-2 mx-auto bg-stone-700 rounded">
         <div className="px-4 py-5 sm:p-6">
           <div className="relative">
-            <h2 className="text-lg text-white">Balance</h2>
+            <h2 className="text-2xl text-white">Balance</h2>
             <br/>
             <Tab.Group
               selectedIndex={selectedIndex}
               onChange={setSelectedIndex}
             >
-              <Tab.List className="flex p-1 space-x-1 bg-white rounded-lg">
+              <Tab.List className="flex p-1 space-x-1 bg-stone-500 rounded-lg">
                 <Tab
                   key="Deposit"
                   className={({ selected }) =>
                     classNames(
-                      "w-full text-black rounded-lg hover:text-red-500",
-                      "focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60",
+                      "w-full text-black rounded-lg hover:text-white",
+                      "focus:outline-none focus:ring-2 ring-offset-2 ring-white ring-opacity-60",
                       selected
-                        ? "bg-white shadow"
-                        : "text-black hover:bg-white/[0.12] hover:text-red-500"
+                        ? "bg-stone-800 shadow text-white"
+                        : "text-black hover:bg-white/[0.12] hover:text-white"
                     )
                   }
                 >
@@ -37,11 +37,11 @@ export default function Deposits() {
                   key="Withdraw"
                   className={({ selected }) =>
                     classNames(
-                      "w-full text-black rounded-lg hover:text-red-500",
-                      "focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60",
+                      "w-full text-black rounded-lg hover:text-white",
+                      "focus:outline-none focus:ring-2 ring-offset-2 ring-white ring-opacity-60",
                       selected
-                        ? "bg-white shadow"
-                        : "text-black hover:bg-white/[0.12] hover:text-red-500"
+                        ? "bg-stone-800 shadow text-white"
+                        : "text-black hover:bg-stone-300/[0.12] hover:text-white"
                     )
                   }
                 >
@@ -105,13 +105,14 @@ export default function Deposits() {
                               type="number"
                               name="Deposit"
                               id="Deposit"
-                              className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg"
+                              placeholder=" ETH Amount"
+                              className="block w-full mt-1 bg-stone-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg"
                             />
                           </div>
                           <div className="sm:col-span-2">
                             <button
                               type="button"
-                              className="inline-flex px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm items-right hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                              className="inline-flex px-4 py-2 text-base font-medium text-white bg-stone-800 border border-transparent rounded-md shadow-sm items-right hover:bg-stone-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                             >
                               Deposit
                             </button>
@@ -119,24 +120,25 @@ export default function Deposits() {
                         </div>
                       </tr>
                       <tr>
-                        <td className="text-white">DAPP</td>
+                        <td className="text-white">MTB</td>
                         <td className="text-white">0</td>
                         <td className="text-white">0</td>
                       </tr>
                       <tr>
                         <div className="grid grid-cols-1 mt-6 gap-y-6 gap-x-4 sm:grid-cols-12">
-                          <div className="sm:col-span-10">
+                          <div className="sm:col-span-10 ">
                             <input
                               type="number"
                               name="Deposit"
                               id="Deposit"
-                              className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg"
+                              placeholder=" MTB Amount"
+                              className="block w-full mt-1 bg-stone-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg"
                             />
                           </div>
                           <div className="sm:col-span-2">
                             <button
                               type="button"
-                              className="inline-flex px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm items-right hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                              className="inline-flex px-4 py-2 text-base font-medium text-white bg-stone-800 border border-transparent rounded-md shadow-sm items-right hover:bg-stone-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                             >
                               Deposit
                             </button>
@@ -201,13 +203,14 @@ export default function Deposits() {
                               type="number"
                               name="Withdraw"
                               id="Withdraw"
-                              className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg"
+                              placeholder=" ETH Amount"
+                              className="block w-full mt-1 bg-stone-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg"
                             />
                           </div>
                           <div className="sm:col-span-2">
                             <button
                               type="button"
-                              className="inline-flex px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm items-right hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                              className="inline-flex px-4 py-2 text-base font-medium text-white bg-stone-800 border border-transparent rounded-md shadow-sm items-right hover:bg-stone-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                             >
                               Withdraw
                             </button>
@@ -215,7 +218,7 @@ export default function Deposits() {
                         </div>
                       </tr>
                       <tr>
-                        <td className="text-white">DAPP</td>
+                        <td className="text-white">MTB</td>
                         <td className="text-white">0</td>
                         <td className="text-white">0</td>
                       </tr>
@@ -226,13 +229,14 @@ export default function Deposits() {
                               type="number"
                               name="Withdraw"
                               id="Withdraw"
-                              className="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg"
+                              placeholder=" MTB Amount"
+                              className="block w-full mt-1 bg-stone-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg"
                             />
                           </div>
                           <div className="sm:col-span-2">
                             <button
                               type="button"
-                              className="inline-flex px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm items-right hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                              className="inline-flex px-4 py-2 text-base font-medium text-white bg-stone-800 border border-transparent rounded-md shadow-sm items-right hover:bg-stone-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                             >
                               Withdraw
                             </button>

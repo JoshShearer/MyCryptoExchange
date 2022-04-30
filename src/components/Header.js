@@ -11,15 +11,19 @@ function classNames(...classes) {
 
 export default function Header() {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-stone-600">
       {({ open }) => (
         <>
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          
             <div className="flex items-center justify-between h-16">
+            
               <div className="flex items-center">
+              
                 <div className="flex-shrink-0">
-                  
+                <h2 className="text-2xl font-bold text-white absolute left-5 sm:text-4xl">MTB Token Exchange</h2>
                   <div className="relative w-12 h-12 overflow-hidden rounded-full ">
+                  
                     <Image
                       objectFit="cover"
                       src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.uPBrGqSV8_52CWr-Oz2_JgHaHa%26pid%3DApi&f=1"
@@ -27,7 +31,7 @@ export default function Header() {
                       layout="fill"
                       priority
                     />
-                    <h4 className="text-3xl font-extrabold text-white sm:text-4xl">MyCryptoExchange</h4>
+                   
                   </div>
                 </div>
                 <div className="hidden sm:block sm:ml-6">
