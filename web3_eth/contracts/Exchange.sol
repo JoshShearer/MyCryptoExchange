@@ -1,5 +1,5 @@
-
-pragma solidity >=0.8.0 <0.9.0;
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.7.0 <0.9.0;
 
 import "./Token.sol";
 
@@ -35,7 +35,7 @@ contract Exchange {
         uint256 timestamp;
     }
     
-    constructor (address _feeAccount, uint256 _feePercent) public {
+    constructor (address _feeAccount, uint256 _feePercent) {
         feeAccount = _feeAccount;
         feePercent = _feePercent;
     }

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.8.0 <0.9.0;
+pragma solidity >=0.7.0 <0.9.0;
 
 import "openzeppelin-solidity/contracts/utils/math/SafeMath.sol";
 
@@ -18,7 +18,7 @@ contract Token {
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Approval(address indexed owner, address indexed spender, uint256 value);
 
-    constructor() public {
+    constructor() {
         totalSupply = 1000000 *(10 ** decimals);
         balanceOf[msg.sender] = totalSupply;
     }

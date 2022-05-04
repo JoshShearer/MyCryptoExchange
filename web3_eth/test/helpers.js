@@ -1,12 +1,19 @@
 export const ETHER_ADDRESS = '0x0000000000000000000000000000000000000000'
+export const GREEN = 'green'
+export const RED = 'red'
+// var BN = web3.utils.BN;
+// var WEI = web3.utils.toWei;
 
 export const EVM_REVERT = 'VM Exception while processing transaction: revert'
 
-export const ether = (n) => {
-  return new web3.utils.BN(
-    web3.utils.toWei(n.toString(), 'ether')
-  )
+export const DECIMALS = (10**18)
+
+// Shortcut to avoid passing around web3 connection
+export const ether = (wei) => {
+  if(wei) {
+    return(wei / DECIMALS) // 18 decimal places
+  }
 }
 
-// Same as ether
-export const tokens = (n) => ether(n)
+// Tokens and ether havesame decimal resolution
+export const tokens = ether

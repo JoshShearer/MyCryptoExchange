@@ -209,6 +209,8 @@ contract('Exchange', ([deployer, feeAccount, user1, user2]) => {
      
         it('tracks the newly created order', async () => {
           const orderCount = await exchange.orderCount()
+          console.log('logs ', JSON.stringify(result.logs[0], null, 2))
+          console.log('orderId ', result.logs[0].args.id)
           orderCount.toString().should.equal('1')
           const order = await exchange.orders('1')
           order.id.toString().should.equal('1', 'id is correct')

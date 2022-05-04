@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ({ type }) {
+export default function Spinner ({ type }) {
   if(type === 'table') {
     return(<tbody className="text-center spinner-border text-light"></tbody>)
   } else {

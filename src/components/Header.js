@@ -3,27 +3,26 @@ import react, { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Image from "next/image";
-import CryptIcon from "../public/crypto.jpg";
+import CryptIcon from "../../public/crypto.jpg";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Header() {
+export default function Header(props) {
   return (
     <Disclosure as="nav" className="bg-stone-600">
       {({ open }) => (
         <>
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          
+
             <div className="flex items-center justify-between h-16">
-            
+
               <div className="flex items-center">
-              
-                <div className="flex-shrink-0">
-                <h2 className="text-2xl font-bold text-white absolute left-5 sm:text-4xl">MTB Token Exchange</h2>
-                  <div className="relative w-12 h-12 overflow-hidden rounded-full ">
-                  
+
+                <div className="flex-shrink-0 grid grid-cols-3 gap-4">
+                  <div className="text-2xl flex-shrink font-bold text-white sm:text-md">MTB Token Exchange</div>
+                  <div className="relative flex w-12 h-12 overflow-hidden rounded-full ">
                     <Image
                       objectFit="cover"
                       src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.uPBrGqSV8_52CWr-Oz2_JgHaHa%26pid%3DApi&f=1"
@@ -31,59 +30,23 @@ export default function Header() {
                       layout="fill"
                       priority
                     />
-                   
-                  </div>
-                </div>
-                <div className="hidden sm:block sm:ml-6">
-                  <div className="flex space-x-4">
-                    {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                     {/* <a
-                      href="#"
-                      className="px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-md"
-                    >
-                      Markets
-                    </a> */}
-                    <a
-                      href="#"
-                      className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
-                    >
-                      Markets
-                    </a>
-                    <a
-                      href="#"
-                      className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
-                    >
-                      Spot
-                    </a>
-                    {/*<a
-                      href="#"
-                      className="px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
-                    >
-                      Calendar
-                    </a> */}
                   </div>
                 </div>
               </div>
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex items-center">
-                  <button
-                    type="button"
-                    className="p-1 text-gray-400 bg-gray-800 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                  >
-                    <span className="sr-only">View notifications</span>
-                    <BellIcon className="w-6 h-6" aria-hidden="true" />
-                  </button>
 
-                  {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
                     <div>
                       <Menu.Button className="flex text-sm bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                        <span className="sr-only">Open user menu</span>
-                        <img
-                          className="w-8 h-8 rounded-full"
-                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                          alt=""
-                        />
+                        <a
+                          className="nav-link small"
+                          href={`https://etherscan.io/address/${props.account}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {props.account}
+                        </a>
                       </Menu.Button>
                     </div>
                     <Transition
@@ -155,61 +118,17 @@ export default function Header() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block px-3 py-2 text-base font-medium text-white bg-gray-900 rounded-md"
-              >
-                Dashboard
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
-              >
-                Team
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
-              >
-                Projects
-              </Disclosure.Button>
-              <Disclosure.Button
-                as="a"
-                href="#"
-                className="block px-3 py-2 text-base font-medium text-gray-300 rounded-md hover:bg-gray-700 hover:text-white"
-              >
-                Calendar
-              </Disclosure.Button>
-            </div>
+
             <div className="pt-4 pb-3 border-t border-gray-700">
               <div className="flex items-center px-5">
-                <div className="flex-shrink-0">
-                  <img
-                    className="w-10 h-10 rounded-full"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt=""
-                  />
-                </div>
-                <div className="ml-3">
-                  <div className="text-base font-medium text-white">
-                    Tom Cook
-                  </div>
-                  <div className="text-sm font-medium text-gray-400">
-                    tom@example.com
-                  </div>
-                </div>
-                <button
-                  type="button"
-                  className="flex-shrink-0 p-1 ml-auto text-gray-400 bg-gray-800 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                <a
+                  className="nav-link small"
+                  href={`https://etherscan.io/address/${props.account}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <span className="sr-only">View notifications</span>
-                  <BellIcon className="w-6 h-6" aria-hidden="true" />
-                </button>
+                  {props.account}
+                </a>
               </div>
               <div className="px-2 mt-3 space-y-1">
                 <Disclosure.Button

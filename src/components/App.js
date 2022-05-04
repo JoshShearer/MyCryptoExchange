@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import Header from './Header'
 import Footer from './Footer'
 import MTBApp from './MTBApp'
+import web3test from './test'
 
 import { connect } from 'react-redux'
 import { Dispatch, Action } from 'redux'
@@ -24,12 +25,12 @@ class App extends Component {
     const networkId = await web3.eth.net.getId()
     await loadAccount(web3, dispatch)
     const token = await loadToken(web3, networkId, dispatch)
-    if(!token) {
+    if (!token) {
       window.alert('Token smart contract not detected on the current network. Please select another network with Metamask.')
       return
     }
     const exchange = await loadExchange(web3, networkId, dispatch)
-    if(!exchange) {
+    if (!exchange) {
       window.alert('Exchange smart contract not detected on the current network. Please select another network with Metamask.')
       return
     }
@@ -40,6 +41,7 @@ class App extends Component {
       <div>
         <Header />
         { this.props.contractsLoaded ? <MTBApp /> : <div className="content"></div> }
+        {/* <MTBApp /> */}
         <Footer />
       </div>
     );

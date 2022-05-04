@@ -4,65 +4,76 @@ import Spinner from './Spinner'
 import {
   filledOrdersLoadedSelector,
   filledOrdersSelector
-} from '../src/store/selectors'
+} from '../../src/store/selectors'
 
 const showFilledOrders = (filledOrders) => {
-  return(
-    <tbody>
-      { filledOrders.map((order) => {
-        return(
+  return (
+    <tbody className='divide-y divide-grey-400'>
+      {filledOrders.map((order) => {
+        return (
           <tr className={`order-${order.id}`} key={order.id}>
-            <td className="text-muted">{order.formattedTimestamp}</td>
-            <td>{order.tokenAmount}</td>
-            <td className={`text-${order.tokenPriceClass}`}>{order.tokenPrice}</td>
+            <td className="text-stone-500">{order.formattedTimestamp}</td>
+            <td className='text-white'>{order.tokenAmount}</td>
+            {order.orderTypeClass === 'red' ?
+              <td className='text-red-500'>{order.tokenPrice}</td>
+              : <td className='text-green-500'>{order.tokenPrice}</td>
+            }
           </tr>
-        )
-      }) }
+        );
+      })}
     </tbody>
-  )
-}
+  );
+};
 
 class Trades extends Component {
   render() {
     return (
-      <div className="w-full px-3 pt-3 ">
+      <div className="w-full pr-3 pt-3 ">
         <div className="w-full max-w-sm p-2 mx-auto bg-stone-700 rounded">
-          <div className="px-4 py-5 sm:p-6">
+          <div className="py-5 sm:p-6">
             <div className="relative">
               <h2 className="text-2xl text-white">Trades</h2>
-              <table>
-                    <thead>
-                      <tr>
-                        <th
-                          scope="col"
-                          className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-6 md:pl-0"
-                        >
-                          Time
-                        </th>
-                        <th
-                          scope="col"
-                          className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-6 md:pl-0"
-                        >
-                          MTB
-                        </th>
-                        <th
-                          scope="col"
-                          className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-6 md:pl-0"
-                        >
-                          MTB/ETH
-                        </th>
-                      </tr>
-                    </thead>
-                    { this.props.filledOrdersLoaded ? showFilledOrders(this.props.filledOrders) : <Spinner type="table" />}
-                  </table>
-              <br/>
+              <div className="mt-8 flex flex-col">
+                <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                  <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                    <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg"></div>
+                    <table className=' min-w-full divide-y divide-white'>
+                      <thead>
+                        <tr>
+                          <th
+                            scope="col"
+                            className="text-left text-sm font-semibold text-white"
+                          >
+                            Time
+                          </th>
+                          <th
+                            scope="col"
+                            className="text-left text-sm font-semibold text-white"
+                          >
+                            MTB
+                          </th>
+                          <th
+                            scope="col"
+                            className="text-left text-sm font-semibold text-white"
+                          >
+                            MTB/ETH
+                          </th>
+                        </tr>
+                      </thead>
+                      {this.props.filledOrdersLoaded ? showFilledOrders(this.props.filledOrders) : <Spinner type="table" />}
+                    </table>
+                    <br />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
 
-      {/* <div className="vertical">
+
+      /* <div className="vertical">
         <div className="card bg-dark text-white">
           <div className="card-header">
             Trades
@@ -80,7 +91,7 @@ class Trades extends Component {
             </table>
           </div>
         </div>
-      </div> */}
+      </div> */
     )
   }
 }
