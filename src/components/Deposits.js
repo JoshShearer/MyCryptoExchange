@@ -57,7 +57,7 @@ const showForm = (props) => {
 
   return (
     <div className="w-full pl-2 pt-3 ">
-      <div className="w-full max-w-sm mx-auto bg-stone-700 rounded">
+      <div className="w-full max-w-sm min-w-min mx-auto bg-stone-700 rounded">
         <div className="py-5 sm:p-6">
           <div className="relative">
             <h2 className="text-2xl text-white">Balance</h2>
@@ -97,7 +97,7 @@ const showForm = (props) => {
               </Tab.List>
               <Tab.Panels>
                 <Tab.Panel>
-                  <table>
+                  <table className='table-auto'>
                     <thead>
                       <tr>
                         <th
@@ -147,8 +147,8 @@ const showForm = (props) => {
                       )
                     }}
                   >
-                    <div className="grid grid-cols-1 mt-6 gap-y-6 gap-x-4 sm:grid-cols-12">
-                      <div className="sm:col-span-7">
+                    <div className="grid grid-cols-5 mt-6 gap-y-6 gap-x-4 sm:grid-cols-12">
+                      <div className="col-span-3 sm:col-span-7">
                         <input
                           type="number"
                           name="Deposit"
@@ -163,13 +163,13 @@ const showForm = (props) => {
                             )
                           }
                           placeholder=" ETH Amount"
-                          className="block w-full mt-1 bg-stone-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg"
+                          className="block h-8 w-full mt-1 bg-stone-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-md"
                         />
                       </div>
-                      <div className="sm:col-span-2">
+                      <div className="col-span-2">
                         <button
                           type="submit"
-                          className="inline-flex px-4 py-2 text-base font-medium text-white bg-stone-800 border border-transparent rounded-md shadow-sm items-right hover:bg-stone-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                          className="inline-flex px-2 py-2 text-base font-medium text-white bg-stone-800 border border-transparent rounded-md shadow-sm items-right hover:bg-stone-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
                           Deposit
                         </button>
@@ -207,7 +207,7 @@ const showForm = (props) => {
                     }}
                   >
                     <div className="grid grid-cols-1 mt-6 gap-y-6 gap-x-4 sm:grid-cols-12">
-                      <div className="sm:col-span-7 ">
+                      <div className="col-span-3 sm:col-span-7">
                         <input
                           type="number"
                           name="Deposit"
@@ -222,13 +222,13 @@ const showForm = (props) => {
                             )
                           }
                           placeholder=" MTB Amount"
-                          className="block w-full mt-1 bg-stone-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg"
+                          className="block h-8 w-full mt-1 bg-stone-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-md"
                         />
                       </div>
-                      <div className="sm:col-span-2">
+                      <div className="col-span-2">
                         <button
                           type="submit"
-                          className="inline-flex px-4 py-2 text-base font-medium text-white bg-stone-800 border border-transparent rounded-md shadow-sm items-right hover:bg-stone-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                          className="inline-flex px-2 py-2 text-base font-medium text-white bg-stone-800 border border-transparent rounded-md shadow-sm items-right hover:bg-stone-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
                           Deposit
                         </button>
@@ -279,7 +279,7 @@ const showForm = (props) => {
                     withdrawEther(dispatch, exchange, web3, etherWithdrawAmount, account)
                   }}>
                     <div className="grid grid-cols-1 mt-6 gap-y-6 gap-x-4 sm:grid-cols-12">
-                      <div className="sm:col-span-7">
+                      <div className="col-span-3 sm:col-span-7">
                         <input
                           type="number"
                           name="Withdraw"
@@ -293,13 +293,13 @@ const showForm = (props) => {
                             )
                           }
                           placeholder=" ETH Amount"
-                          className="block w-full mt-1 bg-stone-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg"
+                          className="block h-8 w-full mt-1 bg-stone-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-md"
                         />
                       </div>
-                      <div className="sm:col-span-2">
+                      <div className="col-span-2">
                         <button
                           type="submit"
-                          className="inline-flex px-4 py-2 text-base font-medium text-white bg-stone-800 border border-transparent rounded-md shadow-sm items-right hover:bg-stone-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                          className="inline-flex px-2 py-2 text-base font-medium text-white bg-stone-800 border border-transparent rounded-md shadow-sm items-right hover:bg-stone-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
                           Withdraw
                         </button>
@@ -326,7 +326,7 @@ const showForm = (props) => {
                     withdrawToken(dispatch, exchange, web3, token, tokenWithdrawAmount, account)
                   }}>
                     <div className="grid grid-cols-1 mt-6 gap-y-6 gap-x-4 sm:grid-cols-12">
-                      <div className="sm:col-span-7">
+                      <div className="col-span-3 sm:col-span-7">
                         <input
                           type="number"
                           name="Withdraw"
@@ -340,13 +340,13 @@ const showForm = (props) => {
                             )
                           }
                           placeholder=" MTB Amount"
-                          className="block w-full mt-1 bg-stone-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-lg"
+                          className="block h-8 w-full mt-1 bg-stone-500 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-md"
                         />
                       </div>
-                      <div className="sm:col-span-2">
+                      <div className="col-span-2">
                         <button
                           type="submit"
-                          className="inline-flex px-4 py-2 text-base font-medium text-white bg-stone-800 border border-transparent rounded-md shadow-sm items-right hover:bg-stone-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                          className="inline-flex px-2 py-2 text-base font-medium text-white bg-stone-800 border border-transparent rounded-md shadow-sm items-right hover:bg-stone-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
                           Withdraw
                         </button>
@@ -377,7 +377,6 @@ class Deposits extends Component {
     return (
       <div>
         {this.props.showForm ? showForm(this.props) : <Spinner />}
-        {/* {showForm(this.props)} */}
       </div>
     )
   }

@@ -44,6 +44,7 @@ export const loadAccount = async (web3, dispatch) => {
   return account
 }
 
+//Check for metamask before dispatching the token   
 export const loadToken = async (web3, networkId, dispatch) => {
   try {
     const token = new web3.eth.Contract(Token.abi, Token.networks[networkId].address)

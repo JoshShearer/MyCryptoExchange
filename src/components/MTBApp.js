@@ -22,7 +22,7 @@ class MTBApp extends Component {
 
   render() {
     return (
-      <div className="grid grid-flow-row-dense grid-cols-5 gap-1 grid-rows-2 bg-stone-800">
+      <div className="grid grid-flow-row-dense grid-cols-5 gap-1 bg-stone-800">
         <div >
           <Deposits />
           <Orders />

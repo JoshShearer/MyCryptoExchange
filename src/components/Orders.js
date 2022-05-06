@@ -161,7 +161,7 @@ const ShowForm = (props) => {
                         Sell
                       </button>
                     </div>
-                    { showSellTotal ? <small>Total: {sellOrder.amount * sellOrder.price} ETH</small> : null }
+                    { showSellTotal ? <div className="text-white">Total: {sellOrder.amount * sellOrder.price} ETH</div> : null }
                   </form>
                 </Tab.Panel>
               </Tab.Panels>

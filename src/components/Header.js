@@ -1,15 +1,17 @@
 /* This example requires Tailwind CSS v2.0+ */
 import react, { Fragment } from "react";
+import { connect } from 'react-redux'
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import Image from "next/image";
+import { accountSelector } from '../store/selectors'
 import CryptIcon from "../../public/crypto.jpg";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Header(props) {
+function Header(props) {
   return (
     <Disclosure as="nav" className="bg-stone-600">
       {({ open }) => (
@@ -38,9 +40,9 @@ export default function Header(props) {
 
                   <Menu as="div" className="relative ml-3">
                     <div>
-                      <Menu.Button className="flex text-sm bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                      <Menu.Button className="flex text-sm ">
                         <a
-                          className="nav-link small"
+                          className="text-white"
                           href={`https://etherscan.io/address/${props.account}`}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -119,10 +121,10 @@ export default function Header(props) {
 
           <Disclosure.Panel className="sm:hidden">
 
-            <div className="pt-4 pb-3 border-t border-gray-700">
-              <div className="flex items-center px-5">
+            <div className="pt-4 pb-3 ">
+              <div className="flex items-center px-3">
                 <a
-                  className="nav-link small"
+                  className="text-white"
                   href={`https://etherscan.io/address/${props.account}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -160,3 +162,11 @@ export default function Header(props) {
     </Disclosure>
   );
 }
+
+function mapStateToProps(state) {
+  return {
+    account: accountSelector(state)
+  }
+}
+
+export default connect(mapStateToProps)(Header)

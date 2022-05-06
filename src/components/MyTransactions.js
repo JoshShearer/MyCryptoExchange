@@ -28,9 +28,18 @@ const showMyFilledOrders = (props) => {
       {myFilledOrders.map((order) => {
         return (
           <tr key={order.id}>
-            <td className="text-muted">{order.formattedTimestamp}</td>
-            <td className={`text-${order.orderTypeClass}`}>{order.orderSign}{order.tokenAmount}</td>
-            <td className={`text-${order.orderTypeClass}`}>{order.tokenPrice}</td>
+            <td className="text-stone-500">{order.formattedTimestamp}</td>
+            {order.orderTypeClass === 'red' ?
+              <>
+                <td className="text-red-500">{order.orderSign}{order.tokenAmount}</td>
+                <td className="text-red-500">{order.tokenPrice}</td>
+              </>
+              :
+              <>
+                <td className="text-green-500">{order.orderSign}{order.tokenAmount}</td>
+                <td className="text-green-500">{order.tokenPrice}</td>
+              </>
+            }
           </tr>
         )
       })}
@@ -46,19 +55,19 @@ const showMyOpenOrders = (props) => {
       {myOpenOrders.map((order) => {
         return (
           <tr key={order.id}>
-          {order.orderTypeClass === 'red' ?
-          <div>
-            <td className='text-red-500'>{order.tokenAmount}</td>
-            <td className='text-red-500'>{order.tokenPrice}</td>
-            </div>
-            :
-            <div>
-            <td className='text-green-500'>{order.tokenAmount}</td>
-            <td className='text-green-500'>{order.tokenPrice}</td>
-            </div>
-          }
+            {order.orderTypeClass === 'red' ?
+              <>
+                <td className='text-red-500'>{order.tokenAmount}</td>
+                <td className='text-red-500'>{order.tokenPrice}</td>
+              </>
+              :
+              <>
+                <td className='text-green-500'>{order.tokenAmount}</td>
+                <td className='text-green-500'>{order.tokenPrice}</td>
+              </>
+            }
             <td
-              className="text-muted cancel-order"
+              className="text-stone-500 cancel-order"
               onClick={(e) => {
                 cancelOrder(dispatch, exchange, order, account)
               }}
@@ -160,19 +169,19 @@ class MyTransactions extends Component {
                                   scope="col"
                                   className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-6 md:pl-0"
                                 >
-                                  Time
-                                </th>
-                                <th
-                                  scope="col"
-                                  className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-6 md:pl-0"
-                                >
-                                  MTB
+                                  Amount
                                 </th>
                                 <th
                                   scope="col"
                                   className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-6 md:pl-0"
                                 >
                                   MTB/ETH
+                                </th>
+                                <th
+                                  scope="col"
+                                  className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-6 md:pl-0"
+                                >
+                                  Cancel
                                 </th>
                               </tr>
                             </thead>

@@ -260,7 +260,7 @@ const decorateMyOpenOrders = (orders, account) => {
     })
   )
 }
-
+                                        
 const decorateMyOpenOrder = (order, account) => {
   let orderType = order.tokenGive === ETHER_ADDRESS ? 'buy' : 'sell'
 

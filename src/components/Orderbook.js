@@ -15,7 +15,6 @@ import { fillOrder } from '../store/interactions'
 const renderOrder = (order, props) => {
   const { dispatch, exchange, account } = props
   const orderColor = `text-${order.orderTypeClass}-500`
-  // console.log('className ', orderColor)
   return (
 
 

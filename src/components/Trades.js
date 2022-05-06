@@ -14,7 +14,7 @@ const showFilledOrders = (filledOrders) => {
           <tr className={`order-${order.id}`} key={order.id}>
             <td className="text-stone-500">{order.formattedTimestamp}</td>
             <td className='text-white'>{order.tokenAmount}</td>
-            {order.orderTypeClass === 'red' ?
+            {order.tokenPriceClass === 'red' ?
               <td className='text-red-500'>{order.tokenPrice}</td>
               : <td className='text-green-500'>{order.tokenPrice}</td>
             }
@@ -70,28 +70,6 @@ class Trades extends Component {
           </div>
         </div>
       </div>
-
-
-
-      /* <div className="vertical">
-        <div className="card bg-dark text-white">
-          <div className="card-header">
-            Trades
-          </div>
-          <div className="card-body">
-            <table className="table table-dark table-sm small">
-              <thead>
-                <tr>
-                  <th>Time</th>
-                  <th>DAPP</th>
-                  <th>DAPP/ETH</th>
-                </tr>
-              </thead>
-              { this.props.filledOrdersLoaded ? showFilledOrders(this.props.filledOrders) : <Spinner type="table" />}
-            </table>
-          </div>
-        </div>
-      </div> */
     )
   }
 }
