@@ -27,11 +27,6 @@ import {
   makeSellOrder
 } from '../store/interactions'
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 87e965bad3269d5bd350491659f5b0b87ca640d6
 const ShowForm = (props) => {
 
   const {
@@ -48,17 +43,9 @@ const ShowForm = (props) => {
 
 
   return (
-<<<<<<< HEAD
-    // <div className="h-full w-full pl-2 pt-3">
+
       <div className="w-full  max-w-sm mx-auto bg-stone-700 rounded">
         <div className="py-5 sm:p-6">
-          {/* <div className="relative"> */}
-=======
-    <div className="h-full w-full pl-2 pt-3">
-      <div className="w-full  max-w-sm mx-auto bg-stone-700 rounded">
-        <div className="py-5 sm:p-6">
-          <div className="relative">
->>>>>>> 87e965bad3269d5bd350491659f5b0b87ca640d6
             <h2 className="text-2xl text-white">New Order</h2>
             <br />
             <Tab.Group
@@ -103,11 +90,7 @@ const ShowForm = (props) => {
                     <h2 className="text-white">Buy Amount (MTB)</h2>
                     <div className="sm:col-span-4">
                       <input
-<<<<<<< HEAD
                         type="text"
-=======
-                        type="number"
->>>>>>> 87e965bad3269d5bd350491659f5b0b87ca640d6
                         name="Buy"
                         id="Buy"
                         onChange={(e) => dispatch(buyOrderAmountChanged(e.target.value))}
@@ -119,11 +102,7 @@ const ShowForm = (props) => {
                     <h2 className="text-white">Buy Price</h2>
                     <div className="sm:col-span-4">
                       <input
-<<<<<<< HEAD
                         type="text"
-=======
-                        type="number"
->>>>>>> 87e965bad3269d5bd350491659f5b0b87ca640d6
                         name="Buy"
                         id="Buy"
                         onChange={(e) => dispatch(buyOrderPriceChanged(e.target.value))}
@@ -152,11 +131,7 @@ const ShowForm = (props) => {
                     <h2 className="text-white">Sell Amount (MTB)</h2>
                     <div className="sm:col-span-4">
                       <input
-<<<<<<< HEAD
                         type="text"
-=======
-                        type="number"
->>>>>>> 87e965bad3269d5bd350491659f5b0b87ca640d6
                         name="Sell"
                         id="Sell"
                         onChange={(e) => dispatch(sellOrderAmountChanged(e.target.value))}
@@ -168,11 +143,7 @@ const ShowForm = (props) => {
                     <h2 className="text-white">Sell Price</h2>
                     <div className="sm:col-span-4">
                       <input
-<<<<<<< HEAD
                         type="text"
-=======
-                        type="number"
->>>>>>> 87e965bad3269d5bd350491659f5b0b87ca640d6
                         name="Sell"
                         id="Sell"
                         onChange={(e) => dispatch(sellOrderPriceChanged(e.target.value))}
@@ -196,14 +167,6 @@ const ShowForm = (props) => {
             </Tab.Group>
           </div>
         </div>
-<<<<<<< HEAD
-    //   </div>
-    // </div>
-=======
-      </div>
-    </div>
->>>>>>> 87e965bad3269d5bd350491659f5b0b87ca640d6
-  );
 }
 
 class Orders extends Component {

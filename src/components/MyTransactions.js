@@ -83,10 +83,8 @@ class MyTransactions extends Component {
   render() {
     return (
 
-      // <div className="w-full px-3 pt-3 ">
         <div className="w-full max-w-lg p-2 mx-auto bg-stone-700 rounded">
           <div className="px-4 py-5 sm:p-6">
-            {/* <div className="relative"> */}
               <h2 className="text-2xl text-white">My Transactions</h2>
               <br />
               <Tab.Group
@@ -195,8 +193,6 @@ class MyTransactions extends Component {
               </Tab.Group>
             </div>
           </div>
-      //   </div>
-      // </div>
     )
   }
 }

@@ -14,10 +14,7 @@ import {
 } from '../store/selectors'
 
 import { fillOrder } from '../store/interactions'
-<<<<<<< HEAD
 import { Tooltip } from './Tooltip'
-=======
->>>>>>> 87e965bad3269d5bd350491659f5b0b87ca640d6
 
 const renderOrder = (order, props) => {
   const { dispatch, exchange, account } = props
@@ -80,21 +77,10 @@ const showOrderBook = (props) => {
 class OrderBook extends Component {
   render() {
     return (
-<<<<<<< HEAD
-      // <div className="w-full pl-3 pt-3 ">
+
         <div className="w-full max-w-sm mx-auto min-w-fit bg-stone-700 rounded">
           <div className="py-5 sm:p-6">
-            {/* <div className="relative"> */}
               <h2 className="text-2xl text-white">Order Book</h2>
-              {/* <div className="mt-8 flex flex-col"> */}
-=======
-      <div className="w-full pl-3 pt-3 ">
-        <div className="w-full max-w-sm mx-auto bg-stone-700 rounded">
-          <div className="py-5 sm:p-6">
-            <div className="relative">
-              <h2 className="text-2xl text-white">Order Book</h2>
-              <div className="mt-8 flex flex-col">
->>>>>>> 87e965bad3269d5bd350491659f5b0b87ca640d6
                 <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
                   <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                     <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg"></div>
@@ -103,17 +89,7 @@ class OrderBook extends Component {
                     </table>
                     <br />
                   </div>
-<<<<<<< HEAD
-                {/* </div> */}
-              {/* </div> */}
             </div>
-          {/* </div> */}
-=======
-                </div>
-              </div>
-            </div>
-          </div>
->>>>>>> 87e965bad3269d5bd350491659f5b0b87ca640d6
         </div>
       </div>
     )
