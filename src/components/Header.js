@@ -43,7 +43,7 @@ function Header(props) {
                       <Menu.Button className="flex text-sm ">
                         <a
                           className="text-white"
-                          href={`https://etherscan.io/address/${props.account}`}
+                          href={`https://rinkeby.etherscan.io/address/${props.account}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -64,39 +64,13 @@ function Header(props) {
                         <Menu.Item>
                           {({ active }) => (
                             <a
-                              href="#"
+                              href="joshshearer.org"
                               className={classNames(
                                 active ? "bg-gray-100" : "",
                                 "block px-4 py-2 text-sm text-gray-700"
                               )}
                             >
                               Your Profile
-                            </a>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={classNames(
-                                active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
-                              )}
-                            >
-                              Settings
-                            </a>
-                          )}
-                        </Menu.Item>
-                        <Menu.Item>
-                          {({ active }) => (
-                            <a
-                              href="#"
-                              className={classNames(
-                                active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-gray-700"
-                              )}
-                            >
-                              Sign out
                             </a>
                           )}
                         </Menu.Item>
@@ -125,7 +99,7 @@ function Header(props) {
               <div className="flex items-center px-3">
                 <a
                   className="text-white"
-                  href={`https://etherscan.io/address/${props.account}`}
+                  href={`https://rinkeby.etherscan.io/address/${props.account}`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -139,20 +113,6 @@ function Header(props) {
                   className="block px-3 py-2 text-base font-medium text-gray-400 rounded-md hover:text-white hover:bg-gray-700"
                 >
                   Your Profile
-                </Disclosure.Button>
-                <Disclosure.Button
-                  as="a"
-                  href="#"
-                  className="block px-3 py-2 text-base font-medium text-gray-400 rounded-md hover:text-white hover:bg-gray-700"
-                >
-                  Settings
-                </Disclosure.Button>
-                <Disclosure.Button
-                  as="a"
-                  href="#"
-                  className="block px-3 py-2 text-base font-medium text-gray-400 rounded-md hover:text-white hover:bg-gray-700"
-                >
-                  Sign out
                 </Disclosure.Button>
               </div>
             </div>
