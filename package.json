@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "heroku-prebuild": "npm install",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
