@@ -13,7 +13,10 @@
   "dependencies": {
     "@headlessui/react": "^1.5.0",
     "@heroicons/react": "^1.0.6",
+<<<<<<< HEAD
     "@openzeppelin/contracts": "^4.6.0",
+=======
+>>>>>>> 87e965bad3269d5bd350491659f5b0b87ca640d6
     "@rematch/core": "^2.2.0",
     "@truffle/hdwallet-provider": "^2.0.7",
     "@types/react-redux": "^7.1.24",
@@ -27,9 +30,17 @@
     "moment": "^2.29.3",
     "next": "12.1.5",
     "next-redux-wrapper": "^7.0.5",
+<<<<<<< HEAD
     "postcss": "^8.4.12",
     "react": "18.0.0",
     "react-apexcharts": "^1.4.0",
+=======
+    "openzeppelin-solidity": "^4.5.0",
+    "postcss": "^8.4.12",
+    "react": "18.0.0",
+    "react-apexcharts": "^1.4.0",
+    "react-bootstrap": "^2.3.1",
+>>>>>>> 87e965bad3269d5bd350491659f5b0b87ca640d6
     "react-dom": "18.0.0",
     "react-redux": "^8.0.1",
     "redux": "^4.2.0",

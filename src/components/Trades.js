@@ -28,12 +28,10 @@ const showFilledOrders = (filledOrders) => {
 class Trades extends Component {
   render() {
     return (
-      // <div className="w-full pr-3 pt-3 ">
+
         <div className="w-full max-w-sm p-2 mx-auto bg-stone-700 rounded">
           <div className="py-5 sm:p-6">
-            {/* <div className="relative"> */}
               <h2 className="text-2xl text-white">Trades</h2>
-              {/* <div className="mt-8 flex flex-col"> */}
                 <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
                   <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
                     <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg"></div>
@@ -67,9 +65,6 @@ class Trades extends Component {
                 </div>
               </div>
             </div>
-      //     </div>
-      //   </div>
-      // </div>
     )
   }
 }

@@ -281,7 +281,11 @@ const showForm = (props) => {
                     <div className="grid grid-cols-1 mt-6 gap-y-6 gap-x-4 sm:grid-cols-12">
                       <div className="col-span-3 sm:col-span-7">
                         <input
+<<<<<<< HEAD
                           type="text"
+=======
+                          type="number"
+>>>>>>> 87e965bad3269d5bd350491659f5b0b87ca640d6
                           name="Withdraw"
                           id="Withdraw"
                           onChange={(e) =>
@@ -328,7 +332,11 @@ const showForm = (props) => {
                     <div className="grid grid-cols-1 mt-6 gap-y-6 gap-x-4 sm:grid-cols-12">
                       <div className="col-span-3 sm:col-span-7">
                         <input
+<<<<<<< HEAD
                           type="text"
+=======
+                          type="number"
+>>>>>>> 87e965bad3269d5bd350491659f5b0b87ca640d6
                           name="Withdraw"
                           id="Withdraw"
                           onChange={(e) =>
@@ -358,8 +366,13 @@ const showForm = (props) => {
             </Tab.Group>
           </div>
         </div>
+<<<<<<< HEAD
     //   </div>
     // </div>
+=======
+      </div>
+    </div>
+>>>>>>> 87e965bad3269d5bd350491659f5b0b87ca640d6
   )
 }
 
