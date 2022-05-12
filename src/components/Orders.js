@@ -167,6 +167,7 @@ const ShowForm = (props) => {
             </Tab.Group>
           </div>
         </div>
+  )
 }
 
 class Orders extends Component {
