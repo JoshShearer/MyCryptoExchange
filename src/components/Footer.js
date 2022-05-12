@@ -2,7 +2,7 @@
 const navigation = {
     main: [
       { name: 'About', href: 'https://github.com/JoshShearer/MyCryptoExchange' },
-      { name: 'Partners', href: 'joshshearer.org' },
+      { name: 'Partners', href: 'https://joshshearer.org' },
     ],
     social: [
       {

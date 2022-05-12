@@ -1,5 +1,5 @@
 # My Crypto Exchange
-![CryptoEx](https://user-images.githubusercontent.com/50993714/167214381-b23f8548-0759-4483-90d6-b19cd1c2a7e1.png)
+![CryptoEx](https://user-images.githubusercontent.com/50993714/168156913-b7c8b470-11f5-4328-aede-284727cd8b38.png)
 
 ## Overview
 A Web 3 Token Exchange built with solidity smart contracts
