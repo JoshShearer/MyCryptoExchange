@@ -9,8 +9,11 @@ A Web 3 Token Exchange built with solidity smart contracts
  * Redux/Rematch
  * Solidity
  * TailwindUI
- * Metamask
+ * Metamask (Dev)
  * Ganache (Dev)
+
+ * Currently hosted on heroku @ [TokenExchange](https://my-crypto-exchange.herokuapp.com/)
+ * The components will not load unless Metamask is successfully connected to the page with funded accounts
 
 ## Dev Requirements
 You will need to have Ganache installed and running in the background.  In the browser Metamask is connected to your ganache ETH accounts.  Truffle also needs to be installed in order to get started.
@@ -24,7 +27,7 @@ Seed the exchange with some trades/transactions:
 truffle web3-eth/scripts/seed-exchange.js
 ```
 
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
