@@ -38,5 +38,5 @@ yarn-error.log*
 
 /.vscode
 .prettierrc
-web3_eth/abis
+# web3_eth/abis`
 
