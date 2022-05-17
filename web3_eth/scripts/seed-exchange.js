@@ -63,9 +63,6 @@ module.exports = async function(callback) {
     let orderId
     result = await exchange.makeOrder(token.address, tokens(100), ETHER_ADDRESS, ether(0.01), { from: user1 })
     console.log(`Made order from ${user1}`)
-    console.log('result ', JSON.stringify(result, null, 2))
-    console.log('logs ', JSON.stringify(result.logs[0], null, 2))
-    // console.log('abi ', web3.eth.abi.decodeLog())
 
     // User 1 cancells order
     orderId = result.logs[0].args.id

@@ -1,18 +1,9 @@
 import { get, groupBy, reject, maxBy, minBy } from 'lodash'
 import { createSelector } from 'reselect'
 import moment from 'moment'
-import { ETHER_ADDRESS, GREEN, RED, ether, tokens } from '../../web3_eth/helpers'
+import { ETHER_ADDRESS, GREEN, RED, ether, formatBalance, tokens } from '../../web3_eth/helpers'
 
 // TODO: Move me to helpers file
-export const formatBalance = (balance) => {
-  const precision = 100 // 2 decimal places
-
-  balance = ether(balance)
-  balance = Math.round(balance * precision) / precision // Use 2 decimal places
-
-  return balance
-}
-
 const account = state => get(state, 'web3.account')
 export const accountSelector = createSelector(account, a => a)
 
