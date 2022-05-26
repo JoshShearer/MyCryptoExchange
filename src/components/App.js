@@ -6,7 +6,7 @@ import MTBApp from './MTBApp'
 import web3test from './test'
 
 import { connect } from 'react-redux'
-import { Dispatch, Action } from 'redux'
+
 import {
   loadWeb3,
   loadAccount,
@@ -41,7 +41,6 @@ class App extends Component {
       <div>
         <Header />
         { this.props.contractsLoaded ? <MTBApp /> : <div className="content"></div> }
-        {/* <MTBApp /> */}
         <Footer />
       </div>
     );

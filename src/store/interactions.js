@@ -21,7 +21,7 @@ import {
   sellOrderMaking,
   orderMade
 } from './actions'
-import { Dispatch, Action } from 'react'
+
 import Token from '../../web3_eth/abis/Token.json'
 import Exchange from '../../web3_eth/abis/Exchange.json'
 import { ETHER_ADDRESS } from '../../web3_eth/test/helpers'

@@ -1,10 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import { Provider } from 'react-redux'
 import App from '../components/App'
 import configureStore from '../store/configureStore'
-import * as serviceWorker from '../serviceWorker'
 
 const Home: NextPage = () => {
     return (
