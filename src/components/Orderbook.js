@@ -43,7 +43,6 @@ const showOrderBook = (props) => {
   return (
     <tbody className="divide-y divide-gray-400">
       {orderBook.sellOrders.map((order) => renderOrder(order, props))}
-      <br />
       <tr>
         <td
           scope="col"

@@ -17,11 +17,8 @@ function Header(props) {
       {({ open }) => (
         <>
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 mb-4">
-
             <div className="flex items-center justify-between h-16">
-
               <div className="flex items-center">
-
                 <div className="flex-shrink-0 grid grid-cols-3 gap-4">
                   <div className="text-2xl flex-shrink font-bold text-white sm:text-md">MTB DApp Token Exchange</div>
                   <div className="relative flex w-12 h-12 overflow-hidden rounded-full ">
@@ -37,9 +34,7 @@ function Header(props) {
               </div>
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex items-center">
-
-                  <Menu as="div" className="relative ml-3">
-                    <div>
+                  <Menu as="div" className="relative ml-3">                    <div>
                       <Menu.Button className="flex text-sm ">
                         <a
                           className="text-white"
@@ -92,9 +87,7 @@ function Header(props) {
               </div>
             </div>
           </div>
-
           <Disclosure.Panel className="sm:hidden">
-
             <div className="pt-4 pb-3 ">
               <div className="flex items-center px-3">
                 <a

@@ -3,7 +3,7 @@ import { createSelector } from 'reselect'
 import moment from 'moment'
 import { ETHER_ADDRESS, GREEN, RED, ether, formatBalance, tokens } from '../../web3_eth/helpers'
 
-// TODO: Move me to helpers file
+
 const account = state => get(state, 'web3.account')
 export const accountSelector = createSelector(account, a => a)
 
@@ -70,7 +70,7 @@ const decorateFilledOrders = (orders) => {
   )
 }
 
-const decorateOrder = (order) => {
+export const decorateOrder = (order) => {
   let etherAmount
   let tokenAmount
 
@@ -108,7 +108,6 @@ const tokenPriceClass = (tokenPrice, orderId, previousOrder) => {
   if(previousOrder.id === orderId) {
     return GREEN
   }
-
   // Show green price if order price higher than previous order
   // Show red price if order price lower than previous order
   if(previousOrder.tokenPrice <= tokenPrice) {

@@ -13,8 +13,8 @@ import {
   myFilledOrdersSelector,
   myOpenOrdersLoadedSelector,
   myOpenOrdersSelector,
-  exchangeSelector,
-  accountSelector,
+  exchangeSelector, //Model
+  accountSelector, //Model
   orderCancellingSelector
 } from '../store/selectors'
 
