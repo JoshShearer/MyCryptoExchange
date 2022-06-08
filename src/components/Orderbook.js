@@ -17,11 +17,10 @@ const renderOrder = (order, props) => {
   const orderColor = `text-${order.orderTypeClass}-500`
   return (
 
-    // <Tooltip tooltipMessage="{`Click here to ${order.orderFillAction}`}">
-
+    // <Tooltip message={`Click to execute ${order.orderFillAction} order`}>
       <tr
         key={order.id}
-        className="order-book-order"
+        className="order-book-order cursor-pointer"
         onClick={(e) => fillOrder(dispatch, exchange, order, account)}
       >
         <td className='text-white'>{order.tokenAmount}</td>
