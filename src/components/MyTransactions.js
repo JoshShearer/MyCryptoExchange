@@ -67,7 +67,7 @@ const showMyOpenOrders = (props) => {
               </>
             }
             <td
-              className="text-stone-500 cancel-order"
+              className="text-stone-500 cancel-order cursor-pointer"
               onClick={(e) => {
                 cancelOrder(dispatch, exchange, order, account)
               }}
