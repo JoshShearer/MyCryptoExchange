@@ -1,38 +1,42 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 // import './App.css'
-import Header from './Header'
-import Footer from './Footer'
-import MTBApp from './MTBApp'
-import web3test from './test'
+import Header from "./Header";
+import Footer from "./Footer";
+import MTBApp from "./MTBApp";
+import web3test from "./test";
 
-import { connect } from 'react-redux'
+import { connect } from "react-redux";
 
 import {
   loadWeb3,
   loadAccount,
   loadToken,
-  loadExchange
-} from '../store/interactions'
-import { contractsLoadedSelector } from '../store/selectors'
+  loadExchange,
+} from "../store/interactions";
+import { contractsLoadedSelector } from "../store/selectors";
 
 class App extends Component {
   componentDidMount() {
-    this.loadBlockchainData(this.props.dispatch)
+    this.loadBlockchainData(this.props.dispatch);
   }
 
   async loadBlockchainData(dispatch) {
-    const web3 = await loadWeb3(dispatch)
-    const networkId = await web3.eth.net.getId()
-    await loadAccount(web3, dispatch)
-    const token = await loadToken(web3, networkId, dispatch)
+    const web3 = await loadWeb3(dispatch);
+    const networkId = await web3.eth.net.getId();
+    await loadAccount(web3, dispatch);
+    const token = await loadToken(web3, networkId, dispatch);
     if (!token) {
-      window.alert('Token smart contract not detected on the current network. Please select another network with Metamask.')
-      return
+      window.alert(
+        "Token smart contract not detected on the current network. Please select another network with Metamask."
+      );
+      return;
     }
-    const exchange = await loadExchange(web3, networkId, dispatch)
+    const exchange = await loadExchange(web3, networkId, dispatch);
     if (!exchange) {
-      window.alert('Exchange smart contract not detected on the current network. Please select another network with Metamask.')
-      return
+      window.alert(
+        "Exchange smart contract not detected on the current network. Please select another network with Metamask."
+      );
+      return;
     }
   }
 
@@ -40,7 +44,11 @@ class App extends Component {
     return (
       <div>
         <Header />
-        { this.props.contractsLoaded ? <MTBApp /> : <div className="content"></div> }
+        {this.props.contractsLoaded ? (
+          <MTBApp />
+        ) : (
+          <div className="content"></div>
+        )}
         <Footer />
       </div>
     );
@@ -49,8 +57,8 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-    contractsLoaded: contractsLoadedSelector(state)
-  }
+    contractsLoaded: contractsLoadedSelector(state),
+  };
 }
 
-export default connect(mapStateToProps)(App)
+export default connect(mapStateToProps)(App);
